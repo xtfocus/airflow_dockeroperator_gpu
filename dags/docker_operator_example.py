@@ -22,6 +22,7 @@ def docker_dag():
         # https://stackoverflow.com/questions/61186983/airflow-dockeroperator-connect-sock-connectself-unix-socket-filenotfounderror/71853705#71853705
         # chmod 666 this shit
         docker_url="unix://var/run/docker.sock",
+        auto_remove=True,
         # other suggests https://stackoverflow.com/a/70100729/10468347
         network_mode="bridge",
     )
